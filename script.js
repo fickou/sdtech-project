@@ -78,3 +78,44 @@
       document.getElementById('contact').scrollIntoView({behavior:'smooth'});
       document.getElementById('name').focus();
     });
+
+
+    // Script pour l'année du copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Script pour les animations de défilement
+    function checkReveal() {
+      const elements = document.querySelectorAll('.reveal');
+      elements.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add('show');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', checkReveal);
+    window.addEventListener('load', checkReveal);
+    
+    // Script pour le bouton "Nous contacter"
+    document.getElementById('btn-cta').addEventListener('click', function() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Fonction de gestion du formulaire de contact
+    function handleContact(event) {
+      event.preventDefault();
+      const statusElement = document.getElementById('formStatus');
+      statusElement.textContent = 'Envoi en cours...';
+      
+      // Simulation d'envoi (à remplacer par un vrai appel API)
+      setTimeout(() => {
+        statusElement.textContent = 'Message envoyé avec succès!';
+        document.getElementById('contactForm').reset();
+      }, 1500);
+      
+      return false;
+    }

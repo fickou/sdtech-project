@@ -104,18 +104,3 @@
     document.getElementById('btn-cta').addEventListener('click', function() {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     });
-    
-    // Fonction de gestion du formulaire de contact
-    function handleContact(event) {
-      event.preventDefault();
-      const statusElement = document.getElementById('formStatus');
-      statusElement.textContent = 'Envoi en cours...';
-      
-      // Simulation d'envoi (à remplacer par un vrai appel API)
-      setTimeout(() => {
-        statusElement.textContent = 'Message envoyé avec succès!';
-        document.getElementById('contactForm').reset();
-      }, 1500);
-      
-      return false;
-    }

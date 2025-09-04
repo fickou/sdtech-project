@@ -77,7 +77,7 @@
     document.getElementById('btn-cta').addEventListener('click', () => {
       document.getElementById('contact').scrollIntoView({behavior:'smooth'});
       document.getElementById('name').focus();
-      });
+    });
 
 
     // Script pour l'année du copyright

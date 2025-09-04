@@ -1,48 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SDTech - Seynabou & Daouda Technologie</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SDTech — Seynabou & Daouda Technologie</title>
+  <meta name="description" content="SDTech - Solutions Web & IA. Développement, intégration IA, et accompagnement digital." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1><span class="highlight">SDTech</span></h1>
-    <p>Innovation • Développement Full Stack • Intelligence Artificielle</p>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <!-- simple S monogram -->
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#5B8CFF"/><stop offset="1" stop-color="#9B5CFF"/></linearGradient></defs>
+          <rect width="48" height="48" rx="10" fill="url(#g)"/>
+          <path d="M16 18c3-4 16-6 16 0s-12 6-16 12c-3 6 10 6 16 4" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-weight:700">SDTech</div>
+        <div class="small-muted">Seynabou & Daouda Technologie</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#about" class="muted">Qui sommes-nous</a>
+      <a href="#services" class="muted">Services</a>
+      <a href="#values" class="muted">Valeurs</a>
+      <a href="#contact" class="muted">Contact</a>
+      <button class="btn" id="btn-cta">Nous contacter</button>
+    </nav>
   </header>
 
-  <main>
-    <section class="about">
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card reveal" id="hero-left">
+        <h1>SDTech — <span style="color:var(--accent2)">Digital & IA</span></h1>
+        <p class="lead">Nous concevons des applications web et mobiles intelligentes pour accompagner la transformation digitale des organisations en Afrique.</p>
+
+        <div class="chips">
+          <div class="chip">Développement Full Stack</div>
+          <div class="chip">Intelligence Artificielle</div>
+          <div class="chip">SaaS & Automatisation</div>
+        </div>
+
+        <div class="actions">
+          <button class="play" id="playPitch" aria-pressed="false" title="Lire le pitch">
+            ▶️ Écouter le pitch
+          </button>
+          <button class="btn" id="downloadPdf">Télécharger PDF</button>
+        </div>
+
+        <p style="margin-top:16px" class="small-muted">Contact : <strong>SDTech@gmail.com</strong></p>
+      </div>
+
+      <aside class="hero-right reveal" id="hero-right">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <strong>Pourquoi SDTech ?</strong>
+          <span class="muted">Rapide • Local • Fiable</span>
+        </div>
+
+        <div class="kpi" style="margin-bottom:14px">
+          <div><h3>+1</h3><div class="small-muted">Co-fondateurs</div></div>
+          <div><h3>3+</h3><div class="small-muted">Services clés</div></div>
+          <div><h3>100%</h3><div class="small-muted">Approche orientée client</div></div>
+        </div>
+
+        <div class="small-muted">Pitch rapide :</div>
+        <div style="margin-top:10px;color:var(--muted);font-size:14px">SDTech conçoit des solutions numériques modernes et accessibles. Nous combinons développement Full Stack et IA pour produire des outils à fort impact social et économique.</div>
+      </aside>
+    </section>
+
+    <section id="about" class="reveal">
       <h2>Qui sommes-nous ?</h2>
-      <p>
-        SDTech (Seynabou & Daouda Technologie) est une startup fondée par deux passionnés 
-        du développement Full Stack et de l'intelligence artificielle. 
-        Notre mission est d’apporter des solutions numériques innovantes et accessibles.
-      </p>
+      <div class="card" style="margin-top:12px">
+        <p><strong>Seynabou & Daouda</strong> — deux étudiants développeurs Full Stack passionnés d'IA. Nous aidons PME, écoles et start-ups à créer des produits numériques performants et adaptés au marché africain.</p>
+        <div style="margin-top:12px" class="features">
+          <div>🎯 Mission : Créer des apps utiles, intelligentes et accessibles.</div>
+          <div>📍 Local : Compréhension des réalités africaines, optimisation des coûts.</div>
+        </div>
+      </div>
     </section>
 
-    <section class="services">
+    <section id="services" class="reveal">
       <h2>Nos services</h2>
-      <ul>
-        <li>🌍 Développement Web & Mobile</li>
-        <li>🤖 Solutions basées sur l'Intelligence Artificielle</li>
-        <li>☁️ Hébergement Cloud & Sécurité</li>
-        <li>📊 Analyse de données & Automatisation</li>
-      </ul>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3>Développement Web & Mobile</h3>
+          <p class="muted">React, Vue, Laravel, Node.js, Flutter. Interfaces modernes, UX soignée.</p>
+        </div>
+        <div class="card">
+          <h3>Intégration IA</h3>
+          <p class="muted">Chatbots, classification, OCR, recommandations.</p>
+        </div>
+        <div class="card">
+          <h3>Accompagnement & DevOps</h3>
+          <p class="muted">Hébergement sécurisé, CI/CD, maintenance et monitoring.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="cta">
-      <h2>Contactez-nous</h2>
-      <button onclick="showMessage()">Cliquez pour découvrir SDTech 🚀</button>
-      <p id="output"></p>
+    <section id="values" class="reveal">
+      <h2>Nos valeurs</h2>
+      <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:220px">
+          <h3>Innovation</h3>
+          <p class="muted">Toujours en veille pour apporter les meilleures solutions.</p>
+        </div>
+        <div class="card" style="flex:1;min-width:220px">
+          <h3>Utilité</h3>
+          <p class="muted">Chaque projet commence par un vrai besoin métier.</p>
+        </div>
+        <div class="card" style="flex:1;min-width:220px">
+          <h3>Impact social</h3>
+          <p class="muted">Technologie au service de l’éducation et de l’inclusion.</p>
+        </div>
+      </div>
     </section>
+
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:12px">
+        <div class="card">
+          <p class="muted">Tu as un projet ou une question ? Écris-nous.</p>
+          <form id="contactForm" onsubmit="return handleContact(event)">
+            <input type="text" id="name" placeholder="Ton nom" required />
+            <input type="email" id="email" placeholder="Ton email" required />
+            <textarea id="message" placeholder="Ton message" required></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button type="submit" class="btn">Envoyer</button>
+              <div class="small-muted" id="formStatus" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card" style="display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center">
+          <div style="text-align:center">
+            <strong>SDTech</strong>
+            <div class="muted">Seynabou & Daouda Technologie</div>
+            <div style="margin-top:10px">✉️ SDTech@gmail.com</div>
+            <div class="small-muted" style="margin-top:6px">📞 +221 77 000 00 00</div>
+          </div>
+          <div class="socials" style="width:100%">
+            <a class="icon-btn" href="#" onclick="alert('Ajouter lien LinkedIn')">LinkedIn</a>
+            <a class="icon-btn" href="#" onclick="alert('Ajouter lien GitHub')">GitHub</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> SDTech — Seynabou & Daouda Technologie · Tous droits réservés.
+    </footer>
   </main>
 
-  <footer>
-    <p>&copy; 2025 SDTech - Tous droits réservés.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

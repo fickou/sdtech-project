@@ -1,0 +1,14 @@
+{
+  "name": "sdtech",
+  "version": "1.0.0",
+  "description": "Présentation officielle de SDTech avec CI/CD",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Seynabou & Daouda",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
